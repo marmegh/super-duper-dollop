@@ -7,7 +7,7 @@
 <body>
   <main>
     <h1>Do Stuff!!!</h1>
-    <form action="/stuff">
+    <!-- <form action="/stuff">
       <label for="name">
         Name: <input type="text" name="name">
       </label>
@@ -21,6 +21,11 @@
         Password: <input type="password" name="pass">
       </label>
       <input type="submit" value="Submit">
+    </form> -->
+    <form action="/stuff">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" name="" value="Submit">
     </form>
   </main>
 </body>
